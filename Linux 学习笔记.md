@@ -2,6 +2,8 @@
 
 [TOC]
 
+参考书：《鸟哥的 Linux 私房菜》
+
 ## 0. 计算机概论
 
 ![](_static/linux0.png)
@@ -111,5 +113,41 @@
     - 字符 (character) 设备文件：如**键盘鼠标**等，特色为“一次性读取”，不能够截断输出
   - 数据接口文件 (sockets)：属性为 s，可用于用户端与服务端的数据沟通
   - 数据输送档 (FIFO, pipe)：属性为 p
+- 目录
+  - /bin：放置系统可执行文件，如 cat, chmod, chown, date, mv, mkdir, cp, bash 等
+  - /boot：开机会用到的文件
+  - /dev：设备与周边设备
+  - /etc：系统的主要的配置文件
+  - /lib：开机时会用到的函数库
+  - /media：可移除的设备，包括光盘，DVD 等
+  - /mnt：暂时挂载额外设备
+  - /opt：存放第三方协力软件，如 google, deepinwine, netease 等
+  - /tmp：让一般使用者或正在执行的程序暂时放置文件的地方
+  - /home：系统默认的使用者主文件夹
+  - /usr：Unix Software Resource，存放的数据属于可分享的 (shareable) 与不可变动的 (static)
+  - /var：针对常态性变动的文件，包括高速缓存 (cache)，登陆文件 (log file) 以及某些软件运行所产生的文件
+
+![](../../Pictures/linux/2021-07-28 15-37-15 的屏幕截图.png)
+
+## 3. 文件与目录管理
+
+- 添加 PATH：`PATH="${PATH}:<文件夹绝对路径>"` 
+- `cp ` 指令
+  - `cp -s` 创建符号链接 (symbolic link)
+  - `cp -l` 创建实体链接 (hard link)
+  - `cp -u` 两文件有差异时复制
+  - 无附加选项时，若源文件为链接文件，则复制链接文件指向的实际文件，若想复制链接文件本身，则需使用 `cp -d`
 - 
+
+
+
+
+
+
+
+
+
+
+
+
 
